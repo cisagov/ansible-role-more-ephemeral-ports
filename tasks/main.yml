@@ -1,2 +1,14 @@
 ---
-# tasks file for skeleton
+# tasks file for more_ephemeral_ports
+
+- name: Create the /etc/sysctl.d directory (if necessary)
+  file:
+    path: /etc/sysctl.d
+    state: directory
+    mode: 0755
+
+- name: Copy sysctl file
+  copy:
+    src: more_ephemeral_ports.conf
+    dest: /etc/sysctl.d/99-more_ephemeral_ports.conf
+    mode: 0644
