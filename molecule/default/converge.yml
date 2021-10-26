@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  roles:
-    - role: ansible-role-more-ephemeral-ports
+  tasks:
+    - name: Include ansible-role-more-ephemeral-ports
+      ansible.builtin.include_role:
+        name: ansible-role-more-ephemeral-ports
