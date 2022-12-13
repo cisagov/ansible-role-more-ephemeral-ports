@@ -1,8 +1,7 @@
 # ansible-role-more-ephemeral-ports #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-more-ephemeral-ports/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-more-ephemeral-ports/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-more-ephemeral-ports.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-more-ephemeral-ports/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-more-ephemeral-ports.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-more-ephemeral-ports/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-more-ephemeral-ports/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-more-ephemeral-ports/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for configuring an instance for the maximum possible
 number of ephemeral ports.
@@ -34,8 +33,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - more_ephemeral_ports
+  tasks:
+    - name: Configure for maximum number of ephemeral ports
+      ansible.builtin.include_role:
+        name: more_ephemeral_ports
 ```
 
 ## Contributing ##
