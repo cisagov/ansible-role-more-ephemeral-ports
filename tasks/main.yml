@@ -1,6 +1,4 @@
 ---
-# tasks file for more_ephemeral_ports
-
 - name: Create the /etc/sysctl.d directory (if necessary)
   file:
     path: /etc/sysctl.d
