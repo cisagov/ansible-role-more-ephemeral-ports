@@ -1,12 +1,12 @@
 ---
 - name: Create the /etc/sysctl.d directory (if necessary)
   ansible.builtin.file:
-    mode: 0755
+    mode: u=rwx,g=rx,o=rx
     path: /etc/sysctl.d
     state: directory
 
 - name: Copy sysctl file
   ansible.builtin.copy:
     dest: /etc/sysctl.d/99-more_ephemeral_ports.conf
-    mode: 0644
+    mode: u=rw,g=r,o=r
     src: more_ephemeral_ports.conf
