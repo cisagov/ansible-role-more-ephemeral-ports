@@ -1,6 +1,7 @@
 # ansible-role-more-ephemeral-ports #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-more-ephemeral-ports/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-more-ephemeral-ports/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-more-ephemeral-ports)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-more-ephemeral-ports/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-more-ephemeral-ports/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for configuring an instance for the maximum possible
